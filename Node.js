@@ -1,8 +1,6 @@
 
-export default function Node(value = null) {
-    let nextNode = null
-
-    return {
-        value, nextNode
-    }
+export default function Node (value = null, nextNode = null) {
+  return {
+    value, nextNode
+  }
 }

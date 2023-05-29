@@ -101,10 +101,14 @@ export default function LinkedList () {
   // find(value) returns the index of the node containing value, or null if not found.
   this.find = (value) => {
     if (this.listHead == null) return 'not present'
+    else if (this.listHead.nextNode === null) return this.listHead
 
     let temp = this.listHead
     let counter = 0
-    while (temp.nextNode !== null) {
+
+    if (value === temp.value) return 0
+
+    while (counter < this.size()) {
       if (temp.value === value) {
         return counter
       }
